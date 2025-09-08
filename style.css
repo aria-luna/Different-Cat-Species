@@ -23,5 +23,28 @@ img {
   display: block;
   margin: 0 auto;
   border-radius: 8px;}
+/* Class Styles */
+.info-section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.cat-text {
+  color: #444;
+}
+
+/* ID Styles */
+#main-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#featured-cats {
+  background-color: #eaf4f4;
+  padding: 25px;
+}
 
 
