@@ -46,5 +46,16 @@ img {
   background-color: #eaf4f4;
   padding: 25px;
 }
+/* Flexbox layout */
+.flex-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.flex-container .info-section {
+  flex: 1;
+  min-width: 300px;
+}
 
 
