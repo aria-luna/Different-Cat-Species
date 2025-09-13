@@ -2,31 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Different Cat Species</title>
 
-  <!-- Async CSS load to avoid render blocking -->
-  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+  <!-- Preload and async load CSS -->
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="css/style.min.css"/></noscript>
+
+  <!-- Inline critical CSS for above-the-fold -->
+  <style>
+    /* Example critical styles, customize to your needs */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0; background: #fff; color: #333;
+    }
+    header, footer {
+      background: #f4f4f4; padding: 1rem;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      margin: 0.5rem 0;
+    }
+    nav ul {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; justify-content: center;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none; color: #007acc;
+    }
+    main {
+      max-width: 800px; margin: 2rem auto; padding: 0 1rem;
+    }
+    .info-section + .info-section {
+      margin-top: 2rem;
+    }
+    img {
+      max-width: 100%; height: auto; display: block; margin: 1rem 0;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <h1>Different Cat Species</h1>
-    <nav>
+    <nav role="navigation" aria-label="Primary">
       <ul>
         <li><a href="page2.html">Read more about cat breeds on Page 2</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="info-section">
-      <h2>Welcome Cat Lovers!</h2>
+  <main id="main-content" role="main">
+    <section class="info-section" aria-labelledby="welcome-title">
+      <h2 id="welcome-title">Welcome Cat Lovers!</h2>
       <p>Cats are one of the most popular pets worldwide, admired for their independence, grace, and personality.</p>
       <p>There are many cat breeds, each with unique traits, appearances, and behaviors.</p>
     </section>
 
-    <section class="info-section popular-breeds">
-      <h2>Popular Cat Breeds</h2>
+    <section class="info-section popular-breeds" aria-labelledby="popular-breeds-title">
+      <h2 id="popular-breeds-title">Popular Cat Breeds</h2>
       <ul>
         <li>Siamese</li>
         <li>Persian</li>
@@ -35,15 +72,26 @@
       </ul>
     </section>
 
-    <section class="info-section featured-cat">
-      <h2>Featured Cat</h2>
+    <section class="info-section featured-cat" aria-labelledby="featured-cat-title">
+      <h2 id="featured-cat-title">Featured Cat</h2>
       <h3>Siamese</h3>
-      <img src="images/siamese-cat.jpg" alt="Siamese cat with blue eyes sitting on a cushion" width="300" />
+      <picture>
+        <source srcset="images/siamese-cat-600.webp 600w, images/siamese-cat-300.webp 300w" sizes="(max-width: 600px) 100vw, 300px" type="image/webp" />
+        <source srcset="images/siamese-cat-600.jpg 600w, images/siamese-cat-300.jpg 300w" sizes="(max-width: 600px) 100vw, 300px" type="image/jpeg" />
+        <img
+          src="images/siamese-cat-300.jpg"
+          alt="Siamese cat with blue eyes sitting on a cushion"
+          width="300"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
+      </picture>
       <p>The Siamese cat is known for its slender body, blue almond-shaped eyes, and social personality.</p>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Cat Encyclopedia. All rights reserved.</p>
   </footer>
 </body>
