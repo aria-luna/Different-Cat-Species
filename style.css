@@ -1,66 +1,40 @@
-/* General Page Styles */
-body {
-  background-color: #fdf6ec;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 0.9em; /* Slightly smaller base font */
+  }
 
-/* Text alignment */
-h1, h2, h3 {
-  text-align: center;
-  color: #4b2e83;
-}
+  h1, h2, h3 {
+    font-size: 1.5em; /* Reduce heading sizes */
+  }
 
-p {
-  text-align: left;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
+  p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
 
-/* Image style */
-img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;}
-/* Class Styles */
-.info-section {
-  background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.cat-text {
-  color: #444;
-}
-
-/* ID Styles */
-#main-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#featured-cats {
-  background-color: #eaf4f4;
-  padding: 25px;
-}
-/* Flexbox layout */
-.flex-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.flex-container .info-section {
-  flex: 1;
-  min-width: 300px;
-}
-
-@media (max-width: 1920px) and (min-width: 1366px) {
   #main-content {
-    max-width: 800px; /* Adjust as needed */
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  #featured-cats {
+    padding: 15px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 15px; /* Less gap on smaller screens */
+  }
+
+  .flex-container .info-section {
+    flex: none; /* Disable flexible grow/shrink */
+    min-width: 100%; /* Full width */
+    padding: 15px 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
-
