@@ -58,4 +58,9 @@ img {
   min-width: 300px;
 }
 
+@media (max-width: 1920px) and (min-width: 1366px) {
+  #main-content {
+    max-width: 800px; /* Adjust as needed */
+  }
+}
 
