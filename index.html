@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Different Cat Species</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Async CSS load to avoid render blocking -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
 </head>
 <body>
-
   <header>
     <h1>Different Cat Species</h1>
     <nav>
@@ -23,7 +25,7 @@
       <p>There are many cat breeds, each with unique traits, appearances, and behaviors.</p>
     </section>
 
-    <section class="info-section" id="popular-breeds">
+    <section class="info-section popular-breeds">
       <h2>Popular Cat Breeds</h2>
       <ul>
         <li>Siamese</li>
@@ -33,10 +35,10 @@
       </ul>
     </section>
 
-    <section class="info-section" id="featured-cat">
+    <section class="info-section featured-cat">
       <h2>Featured Cat</h2>
       <h3>Siamese</h3>
-      <img src="images/siamese-cat.jpg" alt="Siamese cat with blue eyes sitting on a cushion" width="300">
+      <img src="images/siamese-cat.jpg" alt="Siamese cat with blue eyes sitting on a cushion" width="300" />
       <p>The Siamese cat is known for its slender body, blue almond-shaped eyes, and social personality.</p>
     </section>
   </main>
@@ -44,8 +46,5 @@
   <footer>
     <p>&copy; 2025 Cat Encyclopedia. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
-
