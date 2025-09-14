@@ -1,40 +1,22 @@
+/* style.css */
+
+/* Custom mobile tweaks */
 @media (max-width: 768px) {
   body {
     padding: 10px;
-    font-size: 0.9em; /* Slightly smaller base font */
+    font-size: 0.9em; /* Slightly smaller base font on mobile */
   }
 
   h1, h2, h3 {
-    font-size: 1.5em; /* Reduce heading sizes */
+    font-size: 1.5em; /* Smaller headings on mobile */
   }
+}
 
-  p {
-    font-size: 1em;
-    line-height: 1.4;
-  }
+/* Optional: Your own custom fonts, colors, etc. */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  #main-content {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  #featured-cats {
-    padding: 15px;
-  }
-
-  .flex-container {
-    flex-direction: column;
-    gap: 15px; /* Less gap on smaller screens */
-  }
-
-  .flex-container .info-section {
-    flex: none; /* Disable flexible grow/shrink */
-    min-width: 100%; /* Full width */
-    padding: 15px 10px;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
+footer {
+  font-size: 0.9em;
 }
