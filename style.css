@@ -2,13 +2,13 @@
 h1, h2, h3 {
   font-family: 'Georgia', serif;
   font-weight: 700;
-  color: #2c3e50; /* a deep blue-gray for a unique vibe */
+  color: red; /* changed to red */
 }
 
 /* Unique color schemes */
 body {
-  background-color: #f9fafb; /* soft light background */
-  color: #34495e; /* a medium dark slate for body text */
+  background-color: yellow; /* changed from soft light to yellow */
+  color: red; /* changed from slate to red */
 }
 
 /* Custom borders, backgrounds, or spacing */
